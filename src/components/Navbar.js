@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,46 +40,46 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="/"
+              <Link
+                to="/hero"
                 className={`text-white ${
                   isScrolled ? "hover:text-black" : ""
                 } hover:font-bold px-3 py-2 rounded-md text-sm font-medium`}
               >
                 Home
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className={`text-white ${
                   isScrolled ? "hover:text-black" : ""
                 } hover:font-bold px-3 py-2 rounded-md text-sm font-medium`}
               >
                 About
-              </a>
-              <a
-                href="/skills"
+              </Link>
+              <Link
+                to="/skills"
                 className={`text-white ${
                   isScrolled ? "hover:text-black" : ""
                 } hover:font-bold px-3 py-2 rounded-md text-sm font-medium`}
               >
                 Skills
-              </a>
-              <a
-                href="/projects"
+              </Link>
+              <Link
+                to="/projects"
                 className={`text-white ${
                   isScrolled ? "hover:text-black" : ""
                 } hover:font-bold px-3 py-2 rounded-md text-sm font-medium`}
               >
                 Projects
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className={`text-white ${
                   isScrolled ? "hover:text-black" : ""
                 } hover:font-bold px-3 py-2 rounded-md text-sm font-medium`}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -120,46 +121,46 @@ const Navbar = () => {
       </div>
       <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="/"
+          <Link
+            to="/hero"
             className={`text-white ${
               isScrolled ? "hover:text-gray-300" : ""
             } hover:font-bold block px-3 py-2 rounded-md text-base font-medium`}
           >
             Home
-          </a>
-          <a
-            href="/about"
+          </Link>
+          <Link
+            to="/about"
             className={`text-white ${
               isScrolled ? "hover:text-gray-300" : ""
             } hover:font-bold block px-3 py-2 rounded-md text-base font-medium`}
           >
             About
-          </a>
-          <a
-            href="/skills"
+          </Link>
+          <Link
+            to="/skills"
             className={`text-white ${
               isScrolled ? "hover:text-gray-300" : ""
             } hover:font-bold block px-3 py-2 rounded-md text-base font-medium`}
           >
             Skills
-          </a>
-          <a
-            href="/projects"
+          </Link>
+          <Link
+            to="/projects"
             className={`text-white ${
               isScrolled ? "hover:text-gray-300" : ""
             } hover:font-bold block px-3 py-2 rounded-md text-base font-medium`}
           >
             Projects
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className={`text-white ${
               isScrolled ? "hover:text-gray-300" : ""
             } hover:font-bold block px-3 py-2 rounded-md text-base font-medium`}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
